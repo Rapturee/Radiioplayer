@@ -1,0 +1,58 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1f1f1f; /* Dark background color */
+  color: #fff; /* Text color */
+  padding: 20px;
+}
+
+.channel-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.channel {
+  background-color: #353535; /* Darker background for channels */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+}
+
+img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #31a1bd; /* Accent color for channel names */
+}
+
+.tagline {
+  color: #ccc; /* Lighter text color for taglines */
+  margin-bottom: 15px;
+}
+
+.site-link {
+  display: block;
+  text-decoration: none;
+  color: #ff5a00; /* Highlighted color for site links */
+  margin-bottom: 10px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 15px;
+}

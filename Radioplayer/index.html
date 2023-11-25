@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Swedish Radio Channels</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        animation: abstractBackground 20s linear infinite;
+      }
+
+      @keyframes abstractBackground {
+        0% {
+          background: radial-gradient(
+              circle at top left,
+              #ff5a00,
+              transparent 40%
+            ),
+            radial-gradient(circle at top right, #31a1bd, transparent 40%),
+            radial-gradient(circle at bottom left, #19a972, transparent 40%),
+            radial-gradient(circle at bottom right, #ff5a00, transparent 40%);
+        }
+        25% {
+          background: radial-gradient(
+              circle at top left,
+              #19a972,
+              transparent 40%
+            ),
+            radial-gradient(circle at top right, #ff5a00, transparent 40%),
+            radial-gradient(circle at bottom left, #31a1bd, transparent 40%),
+            radial-gradient(circle at bottom right, #19a972, transparent 40%);
+        }
+        50% {
+          background: radial-gradient(
+              circle at top left,
+              #31a1bd,
+              transparent 40%
+            ),
+            radial-gradient(circle at top right, #19a972, transparent 40%),
+            radial-gradient(circle at bottom left, #ff5a00, transparent 40%),
+            radial-gradient(circle at bottom right, #31a1bd, transparent 40%);
+        }
+        100% {
+          background: radial-gradient(
+              circle at top left,
+              #ff5a00,
+              transparent 40%
+            ),
+            radial-gradient(circle at top right, #31a1bd, transparent 40%),
+            radial-gradient(circle at bottom left, #19a972, transparent 40%),
+            radial-gradient(circle at bottom right, #ff5a00, transparent 40%);
+        }
+      }
+    </style>
+    <div class="channel-list">
+      <div class="channel">
+        <img
+          src="https://static-cdn.sr.se/images/132/2186745_512_512.jpg?preset=api-default-square"
+          alt="P1 Logo"
+        />
+        <h2>P1</h2>
+        <p class="tagline">
+          Talat innehåll om samhälle, kultur och vetenskap...
+        </p>
+        <a href="https://sverigesradio.se/p1" class="site-link">Visit Site</a>
+        <audio controls>
+          <source
+            src="http://sverigesradio.se/topsy/direkt/srapi/132.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="channel">
+        <img
+          src="https://static-cdn.sr.se/images/163/2186754_512_512.jpg?preset=api-default-square"
+          alt="P2 Logo"
+        />
+        <h2>P2</h2>
+        <p class="tagline">
+          P2 är den klassiska musikkanalen som även erbjuder jazz...
+        </p>
+        <a href="https://sverigesradio.se/p2" class="site-link">Visit Site</a>
+        <audio controls>
+          <source
+            src="http://sverigesradio.se/topsy/direkt/srapi/163.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="channel">
+        <img
+          src="https://static-cdn.sr.se/images/164/2186756_512_512.jpg?preset=api-default-square"
+          alt="P3 Logo"
+        />
+        <h2>P3</h2>
+        <p class="tagline">
+          Kanalen för dig som gillar ny musik, livesänd radio...
+        </p>
+        <a href="https://sverigesradio.se/p3" class="site-link">Visit Site</a>
+        <audio controls>
+          <source
+            src="http://sverigesradio.se/topsy/direkt/srapi/164.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </body>
+</html>

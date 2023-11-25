@@ -1,0 +1,46 @@
+Vet ej om vi behövde göra detta eftersom det stod FMW och UXF men jag tog min tid och läste igenom det viktiga i OWASP. Gillar att läsa och studera på engelska mer eftersom det är det språket vi kommer att arbeta med!
+
+!!!1!!!. What is OWASP and what is its primary mission as described in the article?
+
+----Answer---: OWASP stands for Open Web Application Security Project. Its primary mission, as described in the article, is to improve the security of software by providing resources, tools, and guidelines for identifying and mitigating security vulnerabilities in web applications.
+
+!!!2!!!. Explain the concept of "Injection". Provide an example of how an injection attack could compromise a web application's security.
+
+---Answer---: Injection refers to a security vulnerability where untrusted data is sent to an interpreter as part of a command or query, tricking the interpreter into executing unintended commands. One prevalent type is SQL injection, where malicious SQL statements are inserted into an entry field for execution.
+
+For instance, in a web application's login page, if the username and password inputs aren't properly sanitized, an attacker might input something like this as the
+
+username: ' OR 1=1 --
+password: [any password]
+
+If the application's code is susceptible to SQL injection and doesn't handle inputs securely, this input could manipulate the SQL query to become something like:
+
+SELECT \* FROM users WHERE username = '' OR 1=1 --' AND password = '[any password]';
+
+In this case, the query will return all records where the condition '1=1' is true, effectively bypassing the login and granting unauthorized access because '1=1' is always true. This is just one example of how an injection attack can compromise a web application's security by manipulating queries or commands through unsanitized user inputs.
+
+!!!3!!!. Explain two strategies to prevent Broken Authentication vulnerabilities.
+
+---Answer---: Multi-Factor Authentication (MFA):
+Implementing MFA adds an extra layer of security beyond usernames and passwords. It requires users to provide multiple forms of verification to access an account, such as a password along with a temporary code sent to a registered mobile device or email address. Even if passwords are compromised, access remains protected by the additional authentication factor.
+
+Secure Session Management:
+Ensure secure session handling by implementing best practices such as using secure and random session IDs, enforcing session timeouts to automatically log users out after a period of inactivity, and employing proper logout functionalities that invalidate sessions on user logouts or when sessions expire. Additionally, use HTTPS to encrypt data transmitted between the client and server to prevent session hijacking.
+
+By combining these strategies, organizations can significantly reduce the risk of Broken Authentication vulnerabilities and enhance the overall security of their systems.
+
+!!!4!!!. Describe the potential consequences of Insecure Deserialization in web applications. How can developers protect against such attacks?
+
+---Answer---: Insecure deserialization in web applications can lead to severe consequences such as remote code execution, data tampering, and denial of service attacks. Attackers exploit this vulnerability to execute unauthorized code, alter data structures, or overload system resources.
+
+To prevent insecure deserialization attacks, developers can take measures like input validation, using whitelisting for permitted classes, executing deserialization in restricted environments, employing secure serialization libraries, and keeping software updated with patches to mitigate known vulnerabilities.
+
+!!!5!!!. Briefly define Cross-Site Scripting (XSS) as outlined in the article and list two methods suggested in the article to prevent XSS attacks in web applications.
+
+---Answer---: Cross-Site Scripting (XSS) is a security vulnerability where attackers inject malicious scripts into web pages viewed by other users. These scripts can execute in the browsers of unsuspecting users, leading to the theft of sensitive data, session hijacking, or unauthorized access.
+
+Two methods suggested in articles to prevent XSS attacks in web applications are:
+
+Input Sanitization: Validate and sanitize user inputs to ensure that any user-generated content or data entered into the application is free from malicious scripts. This involves filtering and escaping special characters that could be interpreted as code when displayed on web pages.
+
+Content Security Policy (CSP): Implement a Content Security Policy that defines the allowed sources of content that the browser can load for a web page. This policy restricts the execution of scripts to trusted sources, preventing the execution of malicious scripts injected through XSS attacks.
